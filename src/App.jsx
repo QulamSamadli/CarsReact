@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom'
 const App = () => {
   return (
   <BrowserRouter>
-    <div><Products/></div>
+    <Products/>
   </BrowserRouter>
   )
 }

@@ -6,8 +6,8 @@ import ProductDetail from '../ProductDetails/index.jsx'
 const Routing = () => {
   return (
     <Routes>
-         <Route path='/products' element={<Products />} />
-         <Route path='/products/:id' element={<ProductDetail />} />
+         <Route  path='/products' element={<Products />} />
+         <Route  path='/products/:id' element={<ProductDetail />} />
     </Routes>
   )
 }
