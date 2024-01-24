@@ -15,11 +15,8 @@ const ProductDetail = () => {
   }, [id]);
   return (
     <div>
-     {
-        detail.map(({})=>{
-          return  di
-        })
-     }
+      <h2>{description}</h2>
+      <p>{price}</p>
    
     </div>
   );
