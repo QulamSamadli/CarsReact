@@ -1,10 +1,12 @@
 
 
 import React from 'react'
+import Cars from './Products'
+import Products from './Products'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div><Products/></div>
   )
 }
 
