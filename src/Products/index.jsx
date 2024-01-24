@@ -1,29 +1,25 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-const _url ="https://dummyjson.com/products"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import ProductsCard from "../ProductsCard";
+const _url = "https://dummyjson.com/products";
 
 const Products = () => {
-const [products,setProducts]=useState([])
-useEffect(()=>{
-axios.get(_url).then(({data})=>{
-setProducts(data.products)
-})
-
-},[])
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios.get(_url).then(({ data }) => {
+      setProducts(data.products);
+    });
+  }, []);
 
   return (
-    <div>
-
-{
-    products.map(({title,id})=>{
-        return <div key={id}>
-          <p>{title}</p>
-        </div>
-    })
-}
-
+    <div className="grid grid-cols-4 gap-2">
+      {products.map(({ title,brand,images,id }) => {
+        return (
+         <ProductsCard title={title} key={id} images={images} brand={brand} />
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
