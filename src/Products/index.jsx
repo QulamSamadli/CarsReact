@@ -13,9 +13,15 @@ const Products = () => {
 
   return (
     <div className="grid grid-cols-4 gap-2">
-      {products.map(({ title,brand,images,id }) => {
+      {products.map(({ title, brand, images, id }) => {
         return (
-         <ProductsCard title={title} key={id} images={images} brand={brand} />
+          <ProductsCard
+            title={title}
+            key={id}
+            images={images}
+            id={id}
+            brand={brand}
+          />
         );
       })}
     </div>
