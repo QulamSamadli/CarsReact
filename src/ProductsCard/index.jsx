@@ -16,15 +16,3 @@ const ProductsCard = ({ title, brand, images, id }) => {
 };
 
 export default ProductsCard;
-
-
-{/* <div className="flex gap-4">
-        {" "}
-        <div className="flex flex-col gap-6 text-[18px]">
-          <h1>Brand:{brand}</h1>
-          <p>Model:{title}</p>
-        </div>
-        <div className="w-[100px] h-[280px]">
-          <img src={images[0]} alt="" />
-        </div>
-      </div> */}
