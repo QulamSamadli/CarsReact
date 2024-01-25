@@ -1,15 +1,16 @@
-import React from 'react'
-import { Route, Routes } from 'react-router'
-import Products from '../Products'
-import ProductDetail from '../ProductDetails/index.jsx'
+import React from "react";
+import { Route, Routes } from "react-router";
+import Products from "../Products";
+import ProductDetail from "../ProductDetail";
 
 const Routing = () => {
   return (
     <Routes>
-         <Route  path='/products' element={<Products />} />
-         <Route  path='/products/:id' element={<ProductDetail />} />
+      <Route path="/" element={<Products />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/products/:id" element={<ProductDetail />} />
     </Routes>
-  )
-}
+  );
+};
 
-export default Routing
+export default Routing;

@@ -12,7 +12,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 gap-2">
+    <div className=" container flex flex-wrap justify-center gap-2  ">
       {products.map(({ title, brand, images, id }) => {
         return (
           <ProductsCard
@@ -22,6 +22,7 @@ const Products = () => {
             id={id}
             brand={brand}
           />
+       
         );
       })}
     </div>
