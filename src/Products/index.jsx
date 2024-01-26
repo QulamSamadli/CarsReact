@@ -13,12 +13,12 @@ const Products = () => {
 
   return (
     <div className=" container flex flex-wrap justify-center gap-2  ">
-      {products.map(({ title, brand, images, id,price,category }) => {
+      {products.map(({ title, brand, thumbnail, id,price,category }) => {
         return (
           <ProductsCard
             title={title}
             key={id}
-            images={images}
+            thumbnail={thumbnail}
             id={id}
             brand={brand}
             price={price}
