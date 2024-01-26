@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductsCard = ({ title, brand, thumbnail, id,price,category }) => {
+const ProductsCard = ({ title, brand, thumbnail, id,price,category,rating }) => {
   return (
     <Link
       to={`/products/${id}`}
@@ -11,6 +11,7 @@ const ProductsCard = ({ title, brand, thumbnail, id,price,category }) => {
         <div className="w-[150px] h-[200px]" ><img className=" object-contain w-[100%] h-[100%]" src={thumbnail} alt="" /></div>
         <div className="text-center "><h2>{brand} {title}</h2></div>
         <div className="text-center text-[gold]  "><p>{category}</p></div>
+        <div className="text-center "><p>{rating}</p></div>
         <div className="text-center text-[gold] text-[32px] "><p>{price}$</p></div>
       </div>
     </Link>
