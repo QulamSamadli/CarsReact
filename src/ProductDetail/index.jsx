@@ -18,7 +18,7 @@ const ProductDetail = () => {
         <div key={id}>
           <h2>{detail.description}</h2>
           <p>{detail.price}</p>
-          <img src={detail?.images[0]} alt="" />
+          <img className="" src={detail?.images[0]} alt="" />
         </div>
       )}
     </>
