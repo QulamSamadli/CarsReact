@@ -1,15 +1,13 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import  { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay} from "swiper/modules";
 
-// Import Swiper styles
 import "swiper/css";
-
-import "./styles.css";
-
+import style from "./Swiper.module.css";
+import axios from "axios";
+import { useParams } from "react-router";
 const _url = " https://dummyjson.com/products/";
 
 const ProductDetail = () => {
@@ -20,6 +18,8 @@ const ProductDetail = () => {
       setDetail(data);
     });
   }, [id]);
+
+  
   return (
     <>
       {detail.id && (
@@ -29,25 +29,29 @@ const ProductDetail = () => {
             <p>{detail.price}</p>
           </div>
           <div className="flex flex-wrap gap-2  p-5 items-center">
-            <Swiper className="mySwiper">
-              <SwiperSlide>
-                {" "}
+            <Swiper
+              
+              autoplay={{ delay: 2000 }}
+              modules={[Autoplay]}
+              className={`${style.mySwiper}`}
+            >
+              <SwiperSlide className={` ${style.mySwiperSlide} `}>
                 <img className="" src={detail?.images[0]} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className={` ${style.mySwiperSlide} `}>
                 <img className="" src={detail?.images[1]} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className={` ${style.mySwiperSlide} `}>
                 <img className="" src={detail?.images[2]} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className={` ${style.mySwiperSlide} `}>
                 <img className="" src={detail?.images[3]} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className={` ${style.mySwiperSlide} `}>
                 <img className="" src={detail?.images[4]} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
-                {" "}
+              <SwiperSlide className={` ${style.mySwiperSlide} `}>
+                
                 <img className="" src={detail?.images[5]} alt="" />
               </SwiperSlide>
             </Swiper>
